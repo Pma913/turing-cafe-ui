@@ -4,11 +4,11 @@ import './Card.css'
 const Card = () => {
   return (
     <div className='card'>
-      <h2>Name</h2>
-      <p>Date</p>
-      <p>time</p>
-      <p>Number of guests:</p>
-      <button>Cancel</button>
+      <h2 className="name">Name</h2>
+      <p className="date">Date</p>
+      <p className="time">time</p>
+      <p className="guests">Number of guests:</p>
+      <button className="cancel-btn">Cancel</button>
     </div>
   )
 } 
