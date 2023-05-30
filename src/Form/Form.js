@@ -12,13 +12,17 @@ class Form extends Component {
     }
   }
 
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+
   render() {
     return (
       <div className="res-form">
-        <input className="input" type="text" placeholder="Name"></input>
-        <input className="input" type="text" placeholder="Date (mm/dd)"></input>
-        <input className="input" type="text" placeholder="Time"></input>
-        <input className="input" type="number" placeholder="Number of guests"></input>
+        <input className="input" type="text" name="name" placeholder="Name" onChange={this.handleChange}></input>
+        <input className="input" type="text" name="date" placeholder="Date (mm/dd)" onChange={this.handleChange}></input>
+        <input className="input" type="text" name="time" placeholder="Time" onChange={this.handleChange}></input>
+        <input className="input" type="number" name="guests" placeholder="Number of guests" onChange={this.handleChange}></input>
         <button className="res-btn">Make Reservation</button>
       </div>
     )
