@@ -15,11 +15,11 @@ class Form extends Component {
   render() {
     return (
       <div className="res-form">
-        <input type="text" placeholder="Name"></input>
-        <input type="text" placeholder="Date (mm/dd)"></input>
-        <input type="text" placeholder="Time"></input>
-        <input type="number" placeholder="Number of guests"></input>
-        <button>Make Reservation</button>
+        <input className="input" type="text" placeholder="Name"></input>
+        <input className="input" type="text" placeholder="Date (mm/dd)"></input>
+        <input className="input" type="text" placeholder="Time"></input>
+        <input className="input" type="number" placeholder="Number of guests"></input>
+        <button className="res-btn">Make Reservation</button>
       </div>
     )
   }

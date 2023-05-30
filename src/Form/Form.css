@@ -1,0 +1,16 @@
+.res-form {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px 90px 20px
+}
+
+.res-btn {
+  background-color: teal;
+  color: white;
+  border: solid white 1px;
+}
+
+.input, 
+.res-btn {
+  width: 12%
+}
