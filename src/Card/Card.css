@@ -1,0 +1,12 @@
+.card {
+  background-color: white;
+  border-radius: 5px;
+  border: solid teal 3px;
+  color: teal;
+  width: 16%;
+}
+
+.cancel-btn {
+  background-color: teal;
+  color: white;
+}
