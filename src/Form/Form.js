@@ -8,7 +8,7 @@ class Form extends Component {
       name: '',
       date: '',
       time: '',
-      guests: 0
+      number: 0
     }
   }
 
@@ -16,14 +16,21 @@ class Form extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
+  clearForm = () => {
+    this.setState({ name: '', date: '', time: '', number: 0 })
+  }
+
   render() {
     return (
       <div className="res-form">
-        <input className="input" type="text" name="name" placeholder="Name" onChange={this.handleChange}></input>
-        <input className="input" type="text" name="date" placeholder="Date (mm/dd)" onChange={this.handleChange}></input>
-        <input className="input" type="text" name="time" placeholder="Time" onChange={this.handleChange}></input>
-        <input className="input" type="number" name="guests" placeholder="Number of guests" onChange={this.handleChange}></input>
-        <button className="res-btn">Make Reservation</button>
+        <input className="input" type="text" name="name" placeholder="Name" value={this.state.name} onChange={this.handleChange}></input>
+        <input className="input" type="text" name="date" placeholder="Date (mm/dd)" value={this.state.date} onChange={this.handleChange}></input>
+        <input className="input" type="text" name="time" placeholder="Time" value={this.state.time} onChange={this.handleChange}></input>
+        <input className="input" type="number" name="number" placeholder="Number of guests" value={this.state.number} onChange={this.handleChange}></input>
+        <button className="res-btn" onClick={() => {
+          this.props.addRes(this.state)
+          this.clearForm()
+        }}>Make Reservation</button>
       </div>
     )
   }
