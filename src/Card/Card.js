@@ -13,4 +13,4 @@ const Card = () => {
   )
 } 
 
-module.exports = Card
+export default Card
